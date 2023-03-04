@@ -47,7 +47,8 @@ class TweetRepository {
         }
     }
 
-    async getAll(offset, limit) {
+    async getAll(offset,limit)
+    {
         try {
             const tweet = await Tweet.find().skip(offset).limit(limit);
             return tweet;
@@ -55,6 +56,7 @@ class TweetRepository {
             console.log(error);
         }
     }
+    
 }
 
 module.exports = TweetRepository;
