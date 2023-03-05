@@ -13,7 +13,7 @@ app.listen(3000, async () => {
     //     content: 'Third tweet',
     // });
     // const tweets = await Tweet.find({userEmail: 'a@b.com'});
-    const tweetRepo = new TweetRepository();
-    const tweet = await tweetRepo.create({content : 'with Hooks'});
-    console.log(tweet);
+    // const tweetRepo = new TweetRepository();
+    // const tweet = await tweetRepo.create({content : 'with Hooks'});
+    // console.log(tweet);
 });
