@@ -2,18 +2,16 @@ const express = require('express');
 const connect = require('./config/database');
 const app = express();
 
-const TweetRepository = require('./repository/tweetRepository');
-const Comment = require('./models/comment');
+const Tweet = require('./models/tweet');
+
+
 
 app.listen(3000, async () => {
     console.log('server started');
     await connect();
     console.log('Mongo db connected');
-    // const tweet = await Tweet.create({
-    //     content: 'Third tweet',
-    // });
-    // const tweets = await Tweet.find({userEmail: 'a@b.com'});
-    // const tweetRepo = new TweetRepository();
-    // const tweet = await tweetRepo.create({content : 'with Hooks'});
-    // console.log(tweet);
+    const tweet = await Tweet.find({
+        content : ['Tweet with comment Schema','anm'],
+    });
+    console.log(tweet);
 });
